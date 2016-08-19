@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A9DA23B0BBDED0F2D7331CA /* libPods-HXNumericTextField.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54C6F9D65DC28C5E094279DC /* libPods-HXNumericTextField.a */; };
 		FA09CB411D66F19A00232FE1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA09CB401D66F19A00232FE1 /* main.m */; };
 		FA09CB441D66F19A00232FE1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA09CB431D66F19A00232FE1 /* AppDelegate.m */; };
 		FA09CB471D66F19A00232FE1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA09CB461D66F19A00232FE1 /* ViewController.m */; };
 		FA09CB4A1D66F19A00232FE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA09CB481D66F19A00232FE1 /* Main.storyboard */; };
 		FA09CB4C1D66F19A00232FE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA09CB4B1D66F19A00232FE1 /* Assets.xcassets */; };
 		FA09CB4F1D66F19A00232FE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA09CB4D1D66F19A00232FE1 /* LaunchScreen.storyboard */; };
+		FAD6D07A1D66F3D2001F4A27 /* HXNumericTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD6D0791D66F3D2001F4A27 /* HXNumericTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		174583BBED0F8449AF3C4D2C /* Pods-HXNumericTextField.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HXNumericTextField.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HXNumericTextField/Pods-HXNumericTextField.debug.xcconfig"; sourceTree = "<group>"; };
+		54C6F9D65DC28C5E094279DC /* libPods-HXNumericTextField.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HXNumericTextField.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1C6A583F57945207B6FB737 /* Pods-HXNumericTextField.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HXNumericTextField.release.xcconfig"; path = "Pods/Target Support Files/Pods-HXNumericTextField/Pods-HXNumericTextField.release.xcconfig"; sourceTree = "<group>"; };
 		FA09CB3C1D66F19A00232FE1 /* HXNumericTextField.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HXNumericTextField.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA09CB401D66F19A00232FE1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FA09CB421D66F19A00232FE1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +31,8 @@
 		FA09CB4B1D66F19A00232FE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA09CB4E1D66F19A00232FE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA09CB501D66F19A00232FE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAD6D0781D66F3D2001F4A27 /* HXNumericTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXNumericTextField.h; sourceTree = "<group>"; };
+		FAD6D0791D66F3D2001F4A27 /* HXNumericTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXNumericTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +40,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A9DA23B0BBDED0F2D7331CA /* libPods-HXNumericTextField.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C52D70583A1F861C451EA957 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				174583BBED0F8449AF3C4D2C /* Pods-HXNumericTextField.debug.xcconfig */,
+				A1C6A583F57945207B6FB737 /* Pods-HXNumericTextField.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EB351EBA5F64648D2D36B8EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				54C6F9D65DC28C5E094279DC /* libPods-HXNumericTextField.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FA09CB331D66F19A00232FE1 = {
 			isa = PBXGroup;
 			children = (
 				FA09CB3E1D66F19A00232FE1 /* HXNumericTextField */,
 				FA09CB3D1D66F19A00232FE1 /* Products */,
+				C52D70583A1F861C451EA957 /* Pods */,
+				EB351EBA5F64648D2D36B8EE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +85,7 @@
 		FA09CB3E1D66F19A00232FE1 /* HXNumericTextField */ = {
 			isa = PBXGroup;
 			children = (
+				FAD6D0771D66F3D2001F4A27 /* HXNumericTextField */,
 				FA09CB421D66F19A00232FE1 /* AppDelegate.h */,
 				FA09CB431D66F19A00232FE1 /* AppDelegate.m */,
 				FA09CB451D66F19A00232FE1 /* ViewController.h */,
@@ -79,6 +107,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		FAD6D0771D66F3D2001F4A27 /* HXNumericTextField */ = {
+			isa = PBXGroup;
+			children = (
+				FAD6D0781D66F3D2001F4A27 /* HXNumericTextField.h */,
+				FAD6D0791D66F3D2001F4A27 /* HXNumericTextField.m */,
+			);
+			path = HXNumericTextField;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +123,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA09CB531D66F19A00232FE1 /* Build configuration list for PBXNativeTarget "HXNumericTextField" */;
 			buildPhases = (
+				2207F690DE0B3BE1D0839D2B /* [CP] Check Pods Manifest.lock */,
 				FA09CB381D66F19A00232FE1 /* Sources */,
 				FA09CB391D66F19A00232FE1 /* Frameworks */,
 				FA09CB3A1D66F19A00232FE1 /* Resources */,
+				A9A514B84F7C6523C5488008 /* [CP] Embed Pods Frameworks */,
+				AACB4B25AD4BDD0B6EA5FA1B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,6 +184,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2207F690DE0B3BE1D0839D2B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A9A514B84F7C6523C5488008 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HXNumericTextField/Pods-HXNumericTextField-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AACB4B25AD4BDD0B6EA5FA1B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HXNumericTextField/Pods-HXNumericTextField-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FA09CB381D66F19A00232FE1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -152,6 +240,7 @@
 				FA09CB471D66F19A00232FE1 /* ViewController.m in Sources */,
 				FA09CB441D66F19A00232FE1 /* AppDelegate.m in Sources */,
 				FA09CB411D66F19A00232FE1 /* main.m in Sources */,
+				FAD6D07A1D66F3D2001F4A27 /* HXNumericTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,9 +350,11 @@
 		};
 		FA09CB541D66F19A00232FE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 174583BBED0F8449AF3C4D2C /* Pods-HXNumericTextField.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HXNumericTextField/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = HX.HXNumericTextField;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -272,9 +363,11 @@
 		};
 		FA09CB551D66F19A00232FE1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1C6A583F57945207B6FB737 /* Pods-HXNumericTextField.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HXNumericTextField/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = HX.HXNumericTextField;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -300,6 +393,7 @@
 				FA09CB551D66F19A00232FE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
