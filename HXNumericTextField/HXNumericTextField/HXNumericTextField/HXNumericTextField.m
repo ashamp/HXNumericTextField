@@ -24,6 +24,8 @@
 @property (nonatomic, assign) BOOL shouldCorrectMaxDigit;
 @property (nonatomic, assign) double theMaxDigit;
 
+@property (nonatomic, copy) NSString *thePrefix;
+
 @end
 
 @implementation HXNumericTextFieldBuilder
@@ -78,6 +80,13 @@
     };
 }
 
+- (HXNumericTextFieldBuilder *(^)(NSString *))prefix{
+    return ^HXNumericTextFieldBuilder *(NSString *prefix){
+        self.thePrefix = prefix;
+        return self;
+    };
+}
+
 @end
 
 
@@ -101,6 +110,7 @@
 @property (nonatomic, assign) BOOL shouldCorrectDigit;
 @property (nonatomic, assign) NSUInteger maxDigit;
 
+@property (nonatomic, copy) NSString *prefix;
 
 @end
 
@@ -148,6 +158,10 @@
     
     self.maxValueDidCorrectedBlock = builder.maxValueDidCorrectedBlock;
     
+    self.prefix = builder.thePrefix;
+    
+    self.text = self.prefix;
+    
     self.builder = nil;
     
     [self makeSignal];
@@ -165,7 +179,11 @@ static NSCharacterSet* numberSet;
     
     @weakify(self);
     
-    RACSignal *textSignal = self.rac_textSignal;
+    NSInteger prefixLength = self.prefix.length;
+    
+    RACSignal *textSignal = [self.rac_textSignal map:^id(NSString *value) {
+        return [value substringFromIndex:prefixLength];
+    }];
     
     //整数位数
     RACSignal *intPlaceSignal = [textSignal map:^id(NSString *value) {
@@ -295,13 +313,13 @@ static NSCharacterSet* numberSet;
         return self.autoZeroWhenEmpty;
     }] subscribeNext:^(id x) {
         @strongify(self);
-        self.text = @"0";
+        self.text = [NSString stringWithFormat:@"%@0",self.prefix?:@""];
     }];
     
     //修正
     [[RACSignal merge:@[correctInvalidTextSignal,correctMaxValueSignal,correctStartZeroSignal,correctDotSignal]] subscribeNext:^(NSString *x) {
         @strongify(self);
-        self.text = x;
+        self.text = [NSString stringWithFormat:@"%@%@",self.prefix?:@"",x];
     }];
     
 }

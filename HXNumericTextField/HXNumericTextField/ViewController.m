@@ -148,7 +148,7 @@
         [scrollView addSubview:titleLabel];
         Y+=30;
         HXNumericTextField *textField = [[HXNumericTextField alloc] initWithBuilder:^(HXNumericTextFieldBuilder *build) {
-            build.autoZeroWhenEmpty(YES).maxDigit(8).floatPrecision(2).maxValue(23456789.87);
+            build.autoZeroWhenEmpty(YES).maxDigit(8).floatPrecision(2).maxValue(23456789.87).prefix(@"$.");
         }];
         textField.frame = CGRectMake(16, Y, 300, 40);
         textField.backgroundColor = [UIColor cyanColor];
